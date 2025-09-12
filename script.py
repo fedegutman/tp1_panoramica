@@ -12,10 +12,13 @@ def onclick(event):
     if event.xdata is not None and event.ydata is not None:
         x, y = event.xdata, event.ydata
         points.append((x, y))
-        print(f"Punto seleccionado: ({x:.2f}, {y:.2f})")
-        # Dibujar un punto en la imagen
-        plt.scatter(x, y, c='r', s=50)
-        plt.draw()
+        idx = len(points)  # número del punto
+        print(f"Punto {idx}: ({x:.2f}, {y:.2f})")
+        # Dibujar un punto rojo
+        ax.scatter(x, y, c='r', s=50)
+        # Dibujar el número al lado del punto
+        ax.text(x+5, y-5, str(idx), color='yellow', fontsize=12, weight='bold')
+        fig.canvas.draw()
 
 # Crear figura y conectar el evento del mouse
 fig, ax = plt.subplots()
