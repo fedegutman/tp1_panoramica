@@ -10,7 +10,13 @@ Se trabajó con tres conjuntos de datos:
 ---
 
 ## 📂 Estructura del Proyecto
-
+- `tp1_pano.ipynb`: Notebook principal con el desarrollo del trabajo.
+- `utils.py`: Funciones auxiliares.
+- `visualization.py`: Funciones de visualización.
+- `methods.py`: Implementación de los métodos principales.
+- `requirements.txt`: Dependencias necesarias.
+- `img/`: Carpeta con las imágenes de los datasets.
+- `script.py`: Código para seleccionar puntos manualmente.
 
 ---
 

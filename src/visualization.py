@@ -76,3 +76,26 @@ def draw_matches_thick_rgb(img1_rgb, keypoints1, img2_rgb, keypoints2, matches, 
     plt.axis('off')
     plt.show()
 
+def plot_overlays_pair_rgb(overlay_left_rgb, overlay_right_rgb, title_left, title_right, figsize=(16,8)):
+    fig, ax = plt.subplots(1, 2, figsize=figsize)
+    ax[0].imshow(overlay_left_rgb)
+    ax[0].set_title(title_left)
+    ax[0].axis('off')
+    ax[1].imshow(overlay_right_rgb)
+    ax[1].set_title(title_right)
+    ax[1].axis('off')
+    plt.tight_layout()
+    plt.show()
+
+def graph_images(images, titles=['Árboles Left Image', 'Árboles Center Image', 'Árboles Right Image'], figsize=(15,5)):
+    n = len(images)
+    fig, ax = plt.subplots(1, n, figsize=figsize)
+    if n == 1:
+        ax = [ax]
+    for i in range(n):
+        ax[i].imshow(images[i])
+        ax[i].set_title(titles[i], fontsize=16)
+        ax[i].axis('off')
+    plt.tight_layout()
+    plt.show()
+
